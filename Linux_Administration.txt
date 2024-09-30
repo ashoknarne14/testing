@@ -1,0 +1,39 @@
+useradd <user-name> --> To add new user
+
+id <user-name> --> To check whether user exists or not
+
+/etc/passwd --> To get user details
+
+/etc/group --> To get group details
+
+passwd <user-name> --> To set password for user
+
+groupadd <group-name> --> To create new group
+
+usermod -g <group-name> <user-name> --> To add user to a group
+
+Every user must have one Primary group and have multiple secondary groups
+
+usermod -aG <group-name> <user-name> --> To add user to secondary group
+
+gpasswd -d <user-name> <group-name> -->  To remove user from a group
+
+Primary group should be assigned to user group before removing the user
+
+userdel <user-name> --> To remove user
+
+User group will not be deleted if you delete the user without removing the primary group
+
+By default, Linux will allow key based authentication only, not the password authentication
+
+Change the authentication to password by updating the file in /etc/ssh/sshd_config
+
+Configure the user public key to continue with key based authentication by creating .ssh directory and authorized_keys file under it
+
+
+chown <user-name> <file-name>  --> To change the owner name of a file
+
+chmod 777 <file-name/directory-name> --> To add/remove permissions from directory/file
+
+
+
